@@ -8,3 +8,22 @@
     justify-content: space-evenly;
     align-items: center;
 }
+
+.title{
+    color: darkred;
+    text-shadow: -7px 6px 12px black;
+    text-decoration: wavy;
+}
+
+.botonMenu{
+    border-width: 2px;
+    border-color: azure;
+    border-style: groove;
+    border-radius: 30px;
+}
+
+.botonMenu:hover{
+    background-color:salmon;
+    border-color:khaki;
+    color: white;
+}

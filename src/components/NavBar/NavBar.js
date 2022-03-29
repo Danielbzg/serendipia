@@ -3,10 +3,10 @@ import './NavBar.css'
 const NavBar = () => {
     return(
         <nav className="NavBar">
-            <button>Inicio</button>
-            <button>Quiénes somos</button>
-            <button>Productos</button>
-            <button>Contacto</button>
+            <button className="botonMenu">Inicio</button>
+            <button className="botonMenu">Quiénes somos</button>
+            <button className="botonMenu">Productos</button>
+            <button className="botonMenu">Contacto</button>
         </nav>
     )
 }

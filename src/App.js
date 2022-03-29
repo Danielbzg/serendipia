@@ -7,9 +7,9 @@ const App = () => {
     <div className="App">
       <header className="App-header">
         <NavBar />
-        <h1>Serendipia</h1>
+        <h1 className="title">Serendipia</h1>
         <div className="orgBase">
-          <img src={logo} className="App-logo" alt="logo" />
+          <img src={logo} className="App-logo estilologo" alt="logo" />
           <button>Boton</button>
         </div>
         
