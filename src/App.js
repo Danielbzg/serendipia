@@ -7,9 +7,12 @@ const App = () => {
     <div className="App">
       <header className="App-header">
         <NavBar />
-        <img src={logo} className="App-logo" alt="logo" />
         <h1>Serendipia</h1>
-        <button>Boton</button>
+        <div className="orgBase">
+          <img src={logo} className="App-logo" alt="logo" />
+          <button>Boton</button>
+        </div>
+        
       </header>
     </div>
   );
