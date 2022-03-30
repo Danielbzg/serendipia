@@ -1,18 +1,13 @@
-import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 
 const App = () => {
   return (
     <div className="App">
       <header className="App-header">
         <NavBar />
-        <h1 className="title">Serendipia</h1>
-        <div className="orgBase">
-          <img src={logo} className="App-logo estilologo" alt="logo" />
-          <button>Boton</button>
-        </div>
-        
+        <ItemListContainer greeting='Bienvenido a Serendipia'/>        
       </header>
     </div>
   );

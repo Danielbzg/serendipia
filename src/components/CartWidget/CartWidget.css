@@ -1,0 +1,19 @@
+
+.fondoCarro{
+    background-color: cornflowerblue;
+    border-radius: 10px;
+    width: 75px;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2px;
+}
+.estiloCarrito{
+    height: 50px;
+  }
+
+.estiloCarrito:hover{
+    filter: drop-shadow(0.5px 0.5px 3px white);
+}

@@ -1,21 +1,44 @@
-
+/**/
 .NavBar{
     width: 100vw;
-    height: 10vh;
+    height: 12vh;
     background-color: brown;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    padding-top: 20px;
+}
+
+.estiloLogo{
+    filter: blur();
+    height: 60px;
+    animation: spinLogo infinite 20s linear;
+}
+
+.estiloLogo:hover{
+    filter: drop-shadow(0.5px 0.5px 3px rgba(255, 255, 255, 0.75)) hue-rotate(55deg);
 }
 
 .title{
-    color: darkred;
-    text-shadow: -7px 6px 12px black;
+    font-size: 35px;
+    color: white;
     text-decoration: wavy;
+    margin: 0 0 10px 0;
+
+}
+
+.title:hover{
+    cursor:default;
+    text-shadow: -7px 6px 12px black;
 }
 
 .botonMenu{
+    min-width: 150px;
+    min-height: 40px;
+    color:azure;
+    font-size: 20px;
+    background: linear-gradient(0deg, black 0%, cornflowerblue 75%);
     border-width: 2px;
     border-color: azure;
     border-style: groove;
@@ -23,7 +46,23 @@
 }
 
 .botonMenu:hover{
-    background-color:salmon;
+    background: radial-gradient(circle, cornflowerblue 0%, rgb(0, 0, 0) 100%);
     border-color:khaki;
+    border-width: 4px;
     color: white;
 }
+
+.orgSecciones{
+    width: 35%;
+    display: flex;
+    justify-content: space-around;
+}
+
+@keyframes spinLogo {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
