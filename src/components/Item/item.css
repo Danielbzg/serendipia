@@ -1,0 +1,8 @@
+.DetailBoton{
+    background-color: greenyellow;
+    border-radius: 5px;
+    border-color: black;
+    border-style: groove;
+    border-width: 2px;
+    margin: 5px;
+}
