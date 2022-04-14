@@ -1,8 +1,9 @@
 import ItemCount from "../ItemCount/ItemCount"
 import { getProducts } from '../../asyncmock'
 import { useState, useEffect } from 'react';
+import '../ItemDetail/ItemDetail.css'
 
-const ItemDetail = ({ id, name, price, img, category, tipo, creador, año, stock }) => {
+const ItemDetail = ({ id, name, price, img, category, tipo, creador, anyo, descripcion, stock }) => {
 
     const [products, setProducts] = useState([])
 
@@ -18,15 +19,15 @@ const ItemDetail = ({ id, name, price, img, category, tipo, creador, año, stock
         if (quantity === 0){
             console.log(`Carrito vacío`)
         } else {
-            console.log(`Tenés ${quantity} productos en tu carrito`)
+            console.log(`Tienes ${quantity} productos en tu carrito`)
         }
     }
 
     return (
         
-        <>
+        <div className="OrgDetail">
             <div>
-                <img src={img} alt={name}/>
+                <img className="imagenDetalle" src={img} alt={name}/>
             </div>
             <div>
                 <h3>{name}</h3>
@@ -34,12 +35,13 @@ const ItemDetail = ({ id, name, price, img, category, tipo, creador, año, stock
                 <ul>
                     <li>{tipo}</li>
                     <li>{creador}</li>
-                    <li>{año}</li>
+                    <li>{anyo}</li>
+                    <li>{descripcion}</li>
                     <li>Stock: {stock}</li>
                 </ul>
             </div>  
-            <ItemCount initial={1} stock={5} count={stock} onAdd={handleOnAdd}/>
-        </>
+            <ItemCount initial={1} stock={5} count={1} onAdd={handleOnAdd}/>
+        </div>
         )
     }
 

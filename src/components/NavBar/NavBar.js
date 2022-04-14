@@ -17,7 +17,7 @@ export const NavBar = () => {
 
     return (
         <nav className="NavBar" >
-            <Link to='/'>
+            <Link className='sinSubrayar' to='/'>
             <div>
                 <img src='./images/logo192.png' className="estiloLogo" alt="logo" />
                 <h1 className="title">Serendipia</h1>
