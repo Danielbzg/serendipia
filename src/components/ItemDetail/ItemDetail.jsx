@@ -1,11 +1,13 @@
 import ItemCount from "../ItemCount/ItemCount"
 import { getProducts } from '../../asyncmock'
 import { useState, useEffect } from 'react';
+import { Link } from "react-router-dom";
 import '../ItemDetail/ItemDetail.css'
 
 const ItemDetail = ({ id, name, price, img, category, tipo, creador, anyo, descripcion, stock }) => {
 
     const [products, setProducts] = useState([])
+    const [quantity, setQuantity] = useState(0)
 
     useEffect(() => {
         getProducts().then(prods => {
@@ -15,12 +17,16 @@ const ItemDetail = ({ id, name, price, img, category, tipo, creador, anyo, descr
         })
     }, [])
 
-    const handleOnAdd = (quantity) => {
+    /* const handleOnAdd = (quantity) => {
         if (quantity === 0){
             console.log(`Carrito vacío`)
         } else {
             console.log(`Tienes ${quantity} productos en tu carrito`)
         }
+    } */
+
+    const handleOnAdd = (count) => {
+        setQuantity(count)
     }
 
     return (
@@ -40,7 +46,7 @@ const ItemDetail = ({ id, name, price, img, category, tipo, creador, anyo, descr
                     <li>Stock: {stock}</li>
                 </ul>
             </div>  
-            <ItemCount initial={1} stock={5} count={1} onAdd={handleOnAdd}/>
+            {quantity > 0 ? <Link to='/cart'>Ir al carrito</Link> : <ItemCount initial={1} stock={stock} onAdd={handleOnAdd}/>}
         </div>
         )
     }

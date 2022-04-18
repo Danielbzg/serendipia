@@ -8,7 +8,7 @@ const products = [
         creador: 'José Saramago',
         anyo: '1995',
         descripcion: 'De manera inexplicable, en medio de la calle, un hombre se queda ciego. Es el primer caso de una "ceguera blanca" que se expande sin control. ',
-        stock: 5,
+        stock: 10,
         img: '../images/ensayosobrelaceguera.jpg'
     },
     { 
