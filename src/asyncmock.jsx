@@ -74,7 +74,7 @@ const products = [
     { 
         id: '7', 
         name: 'Los Simpsons',
-        price: 3105,
+        price: 315,
         category: 'series',
         tipo: 'Animación',
         creador: 'Matt Groening',
