@@ -3,13 +3,21 @@ import CartWidget from '../CartWidget/CartWidget';
 import { Link, NavLink } from 'react-router-dom'
 import { getCategories } from '../../asyncmock';
 import './NavBar.css'
+import { firestoreDb } from '../../services/firebase'
+import { getDocs, collection } from 'firebase/firestore'
 
 export const NavBar = () => {
 
     const [categories, setCategories] = useState([])
 
     useEffect (() => {
-        getCategories().then(categories => {
+        /* getCategories().then(categories => {
+            setCategories(categories)
+        }) */
+        getDocs(collection(firestoreDb, 'categories')).then(response => {
+            const categories = response.docs.map(doc => {
+                return{id: doc.id, ...doc.data()}
+            })
             setCategories(categories)
         })
     }, [])

@@ -38,7 +38,7 @@ const ItemDetail = ({ id, name, price, img, category, tipo, creador, anyo, descr
                     <li>Stock: {stock}</li>
                 </ul>
             </div>  
-            {isInCart(id) ? <Link to='/cart'>Ir al carrito</Link> : <ItemCount initial={1} stock={stock} onAdd={handleOnAdd}/>}
+            {<ItemCount initial={1} stock={stock} onAdd={handleOnAdd}/>}
         </div>
         )
     }
