@@ -65,7 +65,7 @@ const products = [
         price: 72,
         category: 'series',
         tipo: 'Comedia-Romántica',
-        creador: 'Aleanna',
+        creador: 'Carter Bays & Craig Thomas',
         anyo: '2005',
         descripcion: 'Ted Mosby (Josh Radnor), es el protagonista y a la vez narrador (Bob Saget -voz de Ted en 2030-) de un relato contado a sus hijos sobre cómo llegó a conocer a su madre, centrándose en las aventuras y peripecias que vivió durante los años previos a que esto sucediese.',
         stock: 5,
@@ -103,7 +103,7 @@ const products = [
         tipo: 'Indie',
         creador: 'Carmen Boza',
         anyo: '2018',
-        descripcion: '“La caja negra” cuenta con un puñado de canciones de fuerza inusitada y ‘Gran Hermano’ destaca por su ritmo potente y denso.',
+        descripcion: '"La caja negra” cuenta con un puñado de canciones de fuerza inusitada y ‘Gran Hermano’ destaca por su ritmo potente y denso.',
         stock: 5,
         img: '../images/carmenboza.jpg'
     },

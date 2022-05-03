@@ -8,7 +8,7 @@ const ItemDetail = ({ id, name, price, img, category, tipo, creador, anyo, descr
 
     const [quantity, setQuantity]= useState(0)
 
-    const { addItem, isInCart } = useContext(CartContext)
+    const { addItem, isInCart, getQuantityProd } = useContext(CartContext)
 
     const handleOnAdd = (count) => {
         setQuantity(count)
@@ -38,7 +38,8 @@ const ItemDetail = ({ id, name, price, img, category, tipo, creador, anyo, descr
                     <li>Stock: {stock}</li>
                 </ul>
             </div>  
-            {<ItemCount initial={1} stock={stock} onAdd={handleOnAdd}/>}
+            {/* {<ItemCount initial={1} stock={stock} onAdd={handleOnAdd}/>} */}
+            <div>{stock>0?<ItemCount onAdd={handleOnAdd} stock={stock} initial={getQuantityProd(id)}/> :<div>Sin Stock </div>}</div>
         </div>
         )
     }

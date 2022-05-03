@@ -13,6 +13,11 @@
     margin: 10px;
 }
 
+.CardList > * {
+    margin: 0.5rem;
+
+}
+
 .ImagenIndividualList{
     max-width: 20vw;
     max-height: 20vh;

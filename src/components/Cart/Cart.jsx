@@ -4,6 +4,7 @@ import CartContext from '../../context/CartContext.jsx'
 import ItemCart from '../ItemCart/ItemCart.jsx'
 import { getDocs, writeBatch, query, where, collection, documentId, addDoc } from 'firebase/firestore'
 import { firestoreDb } from '../../services/firebase/index'
+import { Link } from 'react-router-dom'
 
 const Cart = () => {
 
@@ -26,10 +27,7 @@ return (
         <button onClick={() => {
             clearCart()
         }}>Limpiar carrito</button>
-        <button onClick={() => {
-            finishShopping()
-        }}>Terminar mi compra</button>
-
+        <Link to={'/form'}><button /* className="checkOut" */>Realizar compra</button></Link>
     </div>
 )
 }
