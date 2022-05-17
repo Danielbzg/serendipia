@@ -3,16 +3,26 @@ import CartContext from "../../context/CartContext"
 import { useContext, useState } from "react"
 import { getDocs, writeBatch, query, where, collection, documentId, addDoc } from 'firebase/firestore'
 import { firestoreDb } from '../../services/firebase/index'
+import { NavLink } from 'react-router-dom'
 
 const Form = () => {
 
-    const [input, setInput] = useState('')
+    const [input, setInput] = useState({nombre: '', correo: '', correoConfirm: '', direccion: '', telefono: ''})
     const [loading, setLoading] = useState(false)
-
+    const [orderId, setOrderId] = useState(null)
     const { cart, totalCost, clearCart } = useContext(CartContext)
+    const [buttonDisabled, setButtonDisabled] = useState(true)
 
     const handleSubmit = (e) => {
         e.preventDefault()
+    }
+
+    const onBlurHandler = (event) => {
+        if (input.correo === input.correoConfirm){
+            setButtonDisabled(false)
+        } else{
+            console.log("mail incorrecto")
+        }
     }
 
     const handleChange = (event) => {
@@ -60,18 +70,32 @@ const Form = () => {
                 }
             }).then(({ id }) => {
                 batch.commit()
-                clearCart()
+                const orderId = id
                 console.log(`El id de la orden es ${id}`)
+                return setOrderId(orderId)
             }).catch(error => {
                 console.log(error)
             }).finally(() => {
                 setLoading(false)
             })
+    }
 
+    if (orderId) {
+        return (
+            <>
+                <div>
+                    <h2>¡Gracias por comprar y confiar en nosotros, {input.name}!</h2>
+                    <p>Tu número de orden es {orderId}</p>
+                    <div>
+                        <NavLink to="/">Volver al inicio</NavLink>
+                    </div>
+                </div>
+            </>
+        )
     }
 
     if (loading) {
-        return <span> Se esta generando su orden</span>
+        return <span>Se esta generando su orden</span>
     }
 
 
@@ -80,11 +104,12 @@ const Form = () => {
             <div>
                 <div className='Form'>
                     <h1>Tus datos</h1>
-                    <label>Nombre: <input type='text' onChange={handleChange} name="nombre" value={input.nombre || ""}/></label>
-                    <label>Email: <input type='text' onChange={handleChange} name="correo" value={input.correo || ""}/></label>
-                    <label>Dirección: <input type='text' onChange={handleChange} name="direccion" value={input.direccion || ""}/></label>
-                    <label>Teléfono:<input type="number" onChange={handleChange} name="telefono" value={input.telefono || ""}/></label>
-                    <button onClick={() => createOrder()} type="button">Finalizar compra</button>
+                    <label>Nombre: <input required type='text' onChange={handleChange} name="nombre" value={input.nombre || ""}/></label>
+                    <label>Email: <input required className={(input.correo === input.correoConfirm) ? 'greenOk' : 'redWrong'} type='text' onChange={handleChange} name="correo" value={input.correo || ""}/></label>
+                    <label>Confirmar Email: <input required className={(input.correo === input.correoConfirm) ? 'greenOk' : 'redWrong'} type='text' onChange={handleChange} onBlur={onBlurHandler} name="correoConfirm" value={input.correoConfirm || ""}/></label>
+                    <label>Dirección: <input required type='text' onChange={handleChange} name="direccion" value={input.direccion || ""}/></label>
+                    <label>Teléfono:<input required type="number" onChange={handleChange} name="telefono" value={input.telefono || ""}/></label>
+                    <button onClick={() => createOrder()} required type="button" disabled={buttonDisabled}>Finalizar compra</button>
                 </div>
             </div>
         </form>

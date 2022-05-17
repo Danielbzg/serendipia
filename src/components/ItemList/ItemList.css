@@ -1,5 +1,8 @@
 .orgMain{
+    display: -webkit-flex;
     display: flex;
-    align-items: center;
-    justify-content:space-around;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    float: left;
+    justify-content: space-between;
 }

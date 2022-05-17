@@ -27,7 +27,7 @@ return (
         <button onClick={() => {
             clearCart()
         }}>Limpiar carrito</button>
-        <Link to={'/form'}><button /* className="checkOut" */>Realizar compra</button></Link>
+        <Link to={'/form'}><button>Realizar compra</button></Link>
     </div>
 )
 }

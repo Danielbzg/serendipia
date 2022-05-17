@@ -51,8 +51,8 @@ export const CartContextProvider = ({ children }) => {
     }
 
     const totalCost = () => {
-        const totalCost = Object.values(cart).reduce((acc, {quantity, price}) => acc + quantity * price ,0)
-        return totalCost
+        const totalCost = Object.values(cart).reduce((acc, {quantity, price}) => acc + quantity * price ,0);
+        return totalCost;
     }
 
     const finishShopping = () => {
