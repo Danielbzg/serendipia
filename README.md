@@ -1,70 +1,93 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Web Serendipia
 
-## Available Scripts
+Esta web es un ecommerce de productos culturales tales como música, libros o series en dvd. Es un proyecto creado para el curso de React.js realizado en Coderhouse.
+## Autor
 
-In the project directory, you can run:
+- [Daniel Boza García](https://github.com/Danielbzg)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Dependencias utilizadas
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+react-router-dom: Routing en el browser
 
-### `npm test`
+react-firebase: Base de datos
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## GIF para mostrar el funcionamiento de la página web
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Análisis de componentes
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+El proyecto tiene definidas unas rutas mediante el router en el que se establecen todas estas rutas:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+/ 👉 Ruta que te lleva a la páginainicial de la web
 
-### `npm run eject`
+/list 👉 Acceso al listado de productos de la web
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+/detail/:productId 👉 Ruta de cada producto donde podrás ver una descripción de estos
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+/cart 👉 Ruta que te lleva a la carta de productos que están en tu carrito
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+/form 👉 Te llevará al formulario de registro precompra
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+* 👉 Para las rutas que no estén definidas en el proyecto muestre una página de error que contiene un botón para volver al inicio
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Entre los principales componentes encontramos:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Navbar: que es el componente que engloba el menú de navegación principal de la web. También cuenta con el logo de react que he querido dejar en honor a que el curso es sobre esta librería.
+- ItemListContainer: Contenedor grupal de los productos que se cargan mediante ItemList.
+- ItemDetailContainer: Contenedor del ItemDetail que muestra el producto seleccionado.
+- Item: Es el componente del producto individual.
+- ItemCount: Icono del carrito de compra que aparecerá según haya o no contenido en este.
+- Form: Componente de formulario de registro previo a la compra final.
 
-### Code Splitting
+## Principales funciones del CartContext
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- addItem: Función para añadir productos en el carrito y si ya está en el carrito que no duplique el producto sino que varíe la cantidad.
 
-### Analyzing the Bundle Size
+- getQuantity: Este es el método que se usa para mostrar el número de productos que aparecen al lado del símbolo del carrito.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- isInCart: Booleano para saber si el producto está en carta, o sea, en la cesta o no.
 
-### Making a Progressive Web App
+- clearCart: esta función está asociada al botón de vaciar carrito y limpiará todo lo que se encuentre en el.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- removeItem: esta función removerá el producto con ese id y seteará el nuevo valor del CartWidget.
 
-### Advanced Configuration
+- getQuantityProd: Contador de la cantidad de un producto existente.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- totalCost => Cálculo del valor de la compra.
 
-### Deployment
+- finishShopping: Aviso de finalización de la compra.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
+## Tech Stack
+🛠️ HTML
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+🛠️ CSS
+
+🛠️ JavaScript
+
+🛠️ React JS
+
+## Base de datos de Firebase
+- Los productos pueden pertenecer a una de estas categorías
+| Categorías        | Descripción                                                                |
+| ----------------- | ------------------------------------------------------------------ |
+| Libros | Libros               |
+| Series | Series  |
+| Música | Música |
+
+- Cada producto cuenta con estas variables
+| Variables        | Tipo                                                                |
+| ----------------- | ------------------------------------------------------------------ |
+| id | String |
+| name | String  |
+| price | Number |
+| category | String |
+| tipo | String  |
+| creador | String |
+| anyo | String |
+| descripcion | String  |
+| stock | Number |
+| img | String |
