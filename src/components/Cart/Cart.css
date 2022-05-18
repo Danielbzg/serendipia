@@ -1,0 +1,49 @@
+.orgCard{
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.payCard{
+    min-width: 30rem;
+    max-width: 40rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-width: 2px;
+    border-color: black;
+    border-style: groove;
+    padding: 3rem;
+    background-color: rgba(245, 245, 245, 0.7);
+}
+.orgButtons{
+    width: 15rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.dangerRed{
+    background-color: brown;
+    color: white;
+    border-radius: 0.5rem;
+    padding: 0.4rem;
+}
+
+.OkGreen{
+    background-color: greenyellow;
+    border-radius: 0.5rem;
+    padding: 0.4rem;
+}
+
+.BlueReturn{
+    background-color: cornflowerblue;
+    color: white;
+    border-width: 2px;
+    border-color: black;
+    border-style: groove;
+    border-radius: 0.5rem;
+    padding: 0.4rem;
+}

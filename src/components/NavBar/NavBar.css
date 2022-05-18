@@ -1,7 +1,7 @@
 .NavBar{
     width: 100vw;
     height: 12vh;
-    background-color: brown;
+    background-color: rgba(0, 139, 139, 0.5);
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -28,6 +28,12 @@
 
 .sinSubrayar{
     text-decoration: none;
+}
+
+.LogoName{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .title:hover{

@@ -9,6 +9,8 @@
     border-color: aqua;
     border-width: 2px;
     border-style: groove;
+    border-radius: 0.5rem;
+    padding: 2rem;
 }
 .EstiloContador>p{
     font-size: 15px;
@@ -18,8 +20,14 @@
 .EstiloContador>div{
     display: flex;
     justify-items: center;
+    
+}
+.orgSum{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .EstiloContador>div>button{
-    margin: 0 20px;
+    margin: 0.5rem 0.2rem;
 }

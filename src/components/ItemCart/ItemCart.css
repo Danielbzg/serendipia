@@ -1,0 +1,12 @@
+.styleItemCart{
+    background-color: cadetblue;
+    padding: 1rem 3rem;
+    border-width: 2px;
+    border-style: groove;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 18rem;
+}

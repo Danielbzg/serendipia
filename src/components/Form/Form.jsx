@@ -82,15 +82,15 @@ const Form = () => {
 
     if (orderId) {
         return (
-            <>
-                <div>
-                    <h2>¡Gracias por comprar y confiar en nosotros, {input.name}!</h2>
-                    <p>Tu número de orden es {orderId}</p>
+            <div className='FactFinal'>
+                <div className='styleFinalMessage'>
+                    <h2>¡Gracias por comprar y confiar en nosotros!</h2>
+                    <p>Tu número de orden es: <b>{orderId}</b></p>
                     <div>
                         <NavLink to="/">Volver al inicio</NavLink>
                     </div>
                 </div>
-            </>
+            </div>
         )
     }
 

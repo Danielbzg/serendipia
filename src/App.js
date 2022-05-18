@@ -8,7 +8,8 @@ import { CartContextProvider } from './context/CartContext';
 import Cart from './components/Cart/Cart';
 import Form from './components/Form/Form';
 import Index from './components/Index/index.jsx'
-
+import NotFound from './components/NotFound/NotFound';
+import Footer from './components/Footer/Footer';
 function App() {
 
   return (
@@ -23,7 +24,7 @@ function App() {
             <Route path='/detail/:productId' element={<ItemDetailContainer />} />
             <Route path='/cart' element={<Cart />} />
             <Route path='/form' element={<Form />}/>
-            <Route path='*' element={<h1>NOT FOUND 404</h1>}/>
+            <Route path='*' element={<NotFound />}/>
           </Routes>
         </BrowserRouter>
       </CartContextProvider>

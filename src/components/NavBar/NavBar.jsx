@@ -11,9 +11,6 @@ export const NavBar = () => {
     const [categories, setCategories] = useState([])
 
     useEffect (() => {
-        /* getCategories().then(categories => {
-            setCategories(categories)
-        }) */
         getDocs(collection(firestoreDb, 'categories')).then(response => {
             const categories = response.docs.map(doc => {
                 return{id: doc.id, ...doc.data()}
@@ -26,7 +23,7 @@ export const NavBar = () => {
     return (
         <nav className="NavBar" >
             <Link className='sinSubrayar' to='/'>
-            <div>
+            <div className='LogoName'>
                 <img src='./images/logo192.png' className="estiloLogo" alt="logo" />
                 <h1 className="title">Serendipia</h1>
             </div>

@@ -11,7 +11,7 @@ const ItemCart = ({ id, name, quantity, price }) => {
     }
 
     return (
-        <article>
+        <article className='styleItemCart'>
             <header>
                 <h2>
                     {name}
@@ -22,14 +22,14 @@ const ItemCart = ({ id, name, quantity, price }) => {
                     Cantidad: {quantity}
                 </p>
                 <p>
-                    Precio x Unidad: ${price}
+                    Precio x Unidad: {price}€
                 </p>
             </section>
             <footer>
                  <p>
-                     Subtotal: ${price * quantity}
+                     Subtotal: {price * quantity}€
                  </p>
-                 <button onClick={() => handleRemove(id)}>X</button>
+                 <button onClick={() => handleRemove(id)}>Descartar este producto</button>
             </footer>
         </article>
     )

@@ -19,7 +19,7 @@ const ItemCount = ({stock, initial = 1, onAdd}) => {
 
     return <div className='EstiloContador'>
         <p>Cantidad</p>
-        <div>
+        <div className='orgSum'>
            <button onClick={decrement}>-</button>
                 {count}
             <button onClick={increment}>+</button> 

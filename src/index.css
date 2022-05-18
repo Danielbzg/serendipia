@@ -5,9 +5,54 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  animation-name: fondos;
+  animation-duration: 120s;
+  animation-iteration-count: infinite;
+  animation-timing-function:ease-in-out;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#root{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+@keyframes fondos{
+  0%{
+    background-image: url(../public/images/Fondo1.png);
+    transition: linear;
+  }
+  20%{
+    background-image: url(../public/images/Fondo2.png);
+    transition: linear;
+  }
+  40%{
+    background-image: url(../public/images/Fondo3.png);
+    transition: linear;
+  }
+  60%{
+    background-image: url(../public/images/Fondo4.png);
+    transition: linear;
+  }
+  80%{
+    background-image: url(../public/images/Fondo5.png);
+    transition: linear;
+  }
+   100%{
+    background-image: url(../public/images/Fondo7.png);
+    transition: linear;
+  }
+  0%{
+    background-image: url(../public/images/Fondo1.png);
+    transition: linear;
+  }
 }
