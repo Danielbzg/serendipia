@@ -14,6 +14,8 @@ react-router-dom: Routing en el browser
 react-firebase: Base de datos
 
 ## Muestra del funcionamiento de la página web
+https://github.com/Danielbzg/serendipia/blob/master/public/images/Multimedia.gif
+
 
 ## Análisis de componentes
 
