@@ -16,6 +16,7 @@ react-firebase: Base de datos
 ## GIF para mostrar el funcionamiento de la página web
 
 
+
 ## Análisis de componentes
 
 El proyecto tiene definidas unas rutas mediante el router en el que se establecen todas estas rutas:
@@ -71,14 +72,18 @@ Entre los principales componentes encontramos:
 🛠️ React JS
 
 ## Base de datos de Firebase
-- Los productos pueden pertenecer a una de estas categorías
+- Los productos pueden pertenecer a una de estas categorías:
+
+
 | Categorías        | Descripción                                                                |
 | ----------------- | ------------------------------------------------------------------ |
 | Libros | Libros               |
 | Series | Series  |
 | Música | Música |
 
-- Cada producto cuenta con estas variables
+- Cada producto cuenta con estas variables::
+
+
 | Variables        | Tipo                                                                |
 | ----------------- | ------------------------------------------------------------------ |
 | id | String |
@@ -90,4 +95,8 @@ Entre los principales componentes encontramos:
 | anyo | String |
 | descripcion | String  |
 | stock | Number |
+<<<<<<< HEAD
 | img | String |
+=======
+| img | String |
+>>>>>>> d11de7bee47a6c960b8e6cc24b5188ecabab5252
