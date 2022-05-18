@@ -71,7 +71,7 @@ Entre los principales componentes encontramos:
 🛠️ React JS
 
 ## Base de datos de Firebase
-- Los productos pueden pertenecer a una de estas categorías
+- Los productos pueden pertenecer a una de estas categorías:
 
 | Categorías        | Descripción                                                                |
 | ----------------- | ------------------------------------------------------------------ |
@@ -79,7 +79,7 @@ Entre los principales componentes encontramos:
 | Series | Series  |
 | Música | Música |
 
-- Cada producto cuenta con estas variables
+- Cada producto cuenta con estas variables:
 
 
 | Variables        | Tipo                                                                |
