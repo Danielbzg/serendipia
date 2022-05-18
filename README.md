@@ -72,6 +72,7 @@ Entre los principales componentes encontramos:
 
 ## Base de datos de Firebase
 - Los productos pueden pertenecer a una de estas categorías
+
 | Categorías        | Descripción                                                                |
 | ----------------- | ------------------------------------------------------------------ |
 | Libros | Libros               |
