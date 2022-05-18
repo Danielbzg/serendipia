@@ -20,17 +20,17 @@ react-firebase: Base de datos
 
 El proyecto tiene definidas unas rutas mediante el router en el que se establecen todas estas rutas:
 
-/ 👉 Ruta que te lleva a la páginainicial de la web
+"/" 👉 Ruta que te lleva a la páginainicial de la web
 
-/list 👉 Acceso al listado de productos de la web
+"/list" 👉 Acceso al listado de productos de la web
 
-/detail/:productId 👉 Ruta de cada producto donde podrás ver una descripción de estos
+"/detail/:productId" 👉 Ruta de cada producto donde podrás ver una descripción de estos
 
-/cart 👉 Ruta que te lleva a la carta de productos que están en tu carrito
+"/cart" 👉 Ruta que te lleva a la carta de productos que están en tu carrito
 
-/form 👉 Te llevará al formulario de registro precompra
+"/form" 👉 Te llevará al formulario de registro precompra
 
-* 👉 Para las rutas que no estén definidas en el proyecto muestre una página de error que contiene un botón para volver al inicio
+"*" 👉 Para las rutas que no estén definidas en el proyecto muestre una página de error que contiene un botón para volver al inicio
 
 
 Entre los principales componentes encontramos:
