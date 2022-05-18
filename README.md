@@ -80,6 +80,8 @@ Entre los principales componentes encontramos:
 | Música | Música |
 
 - Cada producto cuenta con estas variables
+
+
 | Variables        | Tipo                                                                |
 | ----------------- | ------------------------------------------------------------------ |
 | id | String |
