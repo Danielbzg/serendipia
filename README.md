@@ -13,7 +13,7 @@ react-router-dom: Routing en el browser
 
 react-firebase: Base de datos
 
-## GIF para mostrar el funcionamiento de la página web
+## Muestra del funcionamiento de la página web
 
 
 
@@ -21,17 +21,17 @@ react-firebase: Base de datos
 
 El proyecto tiene definidas unas rutas mediante el router en el que se establecen todas estas rutas:
 
-/ 👉 Ruta que te lleva a la páginainicial de la web
+"/" 👉 Ruta que te lleva a la páginainicial de la web
 
-/list 👉 Acceso al listado de productos de la web
+"/list" 👉 Acceso al listado de productos de la web
 
-/detail/:productId 👉 Ruta de cada producto donde podrás ver una descripción de estos
+"/detail/:productId" 👉 Ruta de cada producto donde podrás ver una descripción de estos
 
-/cart 👉 Ruta que te lleva a la carta de productos que están en tu carrito
+"/cart" 👉 Ruta que te lleva a la carta de productos que están en tu carrito
 
-/form 👉 Te llevará al formulario de registro precompra
+"/form" 👉 Te llevará al formulario de registro precompra
 
-* 👉 Para las rutas que no estén definidas en el proyecto muestre una página de error que contiene un botón para volver al inicio
+"*" 👉 Para las rutas que no estén definidas en el proyecto muestre una página de error que contiene un botón para volver al inicio
 
 
 Entre los principales componentes encontramos:
@@ -74,14 +74,21 @@ Entre los principales componentes encontramos:
 ## Base de datos de Firebase
 - Los productos pueden pertenecer a una de estas categorías:
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8fecf2d2615adf0781390fd3c8840f81042eb079
 | Categorías        | Descripción                                                                |
 | ----------------- | ------------------------------------------------------------------ |
 | Libros | Libros               |
 | Series | Series  |
 | Música | Música |
 
+<<<<<<< HEAD
 - Cada producto cuenta con estas variables::
+=======
+- Cada producto cuenta con estas variables:
+>>>>>>> 8fecf2d2615adf0781390fd3c8840f81042eb079
 
 
 | Variables        | Tipo                                                                |
