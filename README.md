@@ -13,7 +13,7 @@ react-router-dom: Routing en el browser
 
 react-firebase: Base de datos
 
-## GIF para mostrar el funcionamiento de la página web
+## Muestra del funcionamiento de la página web
 
 
 ## Análisis de componentes
